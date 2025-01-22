@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(42,4,60,1) 100%);
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px; /* Максимальная ширина для больших экранов */
+    margin: 0 auto; /* Выравнивание контейнера по центру */
+}
+
+header {
+    padding: 50px 0;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+    color: #fff;
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: rgba(42,4,60,1);
+    border-radius: 5px;
+    position: relative;
+    left: -10px;
+
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid rgba(42,4,60,1);
+    border-radius: 5px;
+
+}
+
+header nav ul li.btn a {
+    background-color: rgba(42,4,60,1);
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+header nav ul li.btn a:hover {
+    background: rgb(26, 7, 35);
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 40%;
+    padding-top: 70px;
+}
+
+.hero--info h1 {
+    color: #fff;
+    font-size: 57px;
+    font-weight: 700;
+}
+
+.hero--info p {
+    color:#fff;
+    font-size: 20px;
+    line-height: 170%;
+    margin: 30px 0;
+}
+
+.hero--info h1::before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 5px;
+    background: rgba(42,4,60,1);
+    border-radius: 5px;
+    position: relative;
+    left: -10px;
+
+}
+
+.hero--info .btn {
+    color: #fff;
+    background-color: rgba(42,4,60,1);
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 0;
+    transition: all 500ms ease;
+}
+
+.hero--info .btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img {
+    position: absolute;
+    top: -150px;
+    right: 0;
+}
+
+.history {
+    text-align: left;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    top: 30px;
+}
+
+.history--info {
+    width: 70%;
+    padding-top: 70px;
+}
+
+.history--info h4 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 10px;
+}
+
+.history--info h3::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: rgba(42,4,60,1);
+    border-radius: 5px;
+    position: relative;
+    left: -10px;
+
+}
+
+.history--info p{
+    text-align: justify;
+    font-size: 20px;
+}
+
+.trending {
+    padding-top: 50px;
+}
+
+.trending .pictures {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+} 
+
+.trending .pictures span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trending h2 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 20px 10px;
+}
+
+.trending h2::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: rgba(42,4,60,1);
+    border-radius: 5px;
+    position: relative;
+    left: -10px;
+}
+
+.history img {
+    position: absolute;
+    top: 100px;
+    right: 0;
+}
+
+footer {
+    background: #000;
+    padding: 50px 0;
+    z-index: 2;
+    position: relative;
+}
+
+footer .blocks{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .blocks .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+    color: #fff;
+}
+
+footer .blocks p {
+    width: 300px;
+    margin: 15px 0;
+}
+footer .blocks h5 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+footer .blocks ul {
+    list-style: none;
+}
+
+footer .blocks ul li {
+    margin-top: 7px;
+    opacity: 0.8;
+}
+
+/* Страница о нас */
+.hero-about {
+    position: relative;
+}
+
+.hero-about .info {
+    width: 500px;
+    padding: 50px 0;
+}
+
+.hero-about .info h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+.hero-about .info p {
+    font-size: 20px;
+}
+
+.hero-about h1::before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 5px;
+    background: rgba(42,4,60,1);
+    border-radius: 5px;
+    position: relative;
+    left: -10px;
+}
+
+.hero-about img {
+    position: absolute;
+    top: -100px;
+    right: 30px;
+}
+
+.work {
+    padding: 80px 0;
+}
+.work h2 {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.work .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work .blocks .block {
+    width: 25%;
+    border-radius: 10px;
+    padding: 50px 35px;
+    background: #210128;
+}
+
+.work .blocks .block h3 {
+    font-size: 20px;
+    margin: 20px 20px;
+}
+
+.work .blocks .block .badge {
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+.work .blocks .block .badge.pink {
+    background: #690154;
+}
+.work .blocks .block .badge.purple {
+    background: #510169;
+}
+.work .blocks .block .badge.blue {
+    background: #240169;
+}
+
+/* Страница новостей */
+.hero-with {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-with .info {
+    width: 500px;
+    padding: 50px 0;
+}
+
+.hero-with .info h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+.hero-with .info p {
+    font-size: 20px;
+}
+
+.hero-with h1::before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 5px;
+    background: rgba(42,4,60,1);
+    border-radius: 5px;
+    position: relative;
+    left: -10px;
+}
+
+.hero-with img {
+    position: absolute;
+    top: -75px;
+    right: 30px;
+}
+
+/* Правила игры */
+.hero-who {
+    position: relative;
+}
+
+.hero-who .info {
+    width: 500px;
+    padding: 50px 0;
+}
+
+.hero-who .info h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+.hero-who .info p {
+    font-size: 20px;
+}
+
+.hero-who h1::before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 5px;
+    background: rgba(42,4,60,1);
+    border-radius: 5px;
+    position: relative;
+    left: -10px;
+}
+
+.hero-who img {
+    position: absolute;
+    top: -50px;
+    right: 30px;
+}
+
+.historycal {
+    padding-top: 50px;
+}
+
+.historycal {
+    text-align: left;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    top: 10px;
+}
+
+.historycal--info {
+    width: 60%;
+    padding-top: 70px;
+}
+
+.historycal--info h4 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 10px;
+}
+
+.historycal--info p {
+    text-align: justify;
+    font-size: 20px;
+}
+.historycal img {
+    position: absolute;
+    top: 100px;
+    right: 0;
+}
+.historycal h2::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: rgba(42,4,60,1);
+    border-radius: 5px;
+    position: relative;
+    left: -10px;
+}
+
+.historycal--info .one ul {
+    list-style: none;
+}
+
+.historycal--info ul li {
+    margin-top: 15px;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* CSS для формы регистрации */
+.register-container {
+    max-width: 500px;
+    margin: 50px auto; /* Центрирование контейнера */
+    padding: 30px;
+    background: rgba(42, 4, 60, 1);
+    border-radius: 10px;
+}
+
+.register-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(42, 4, 60, 1);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    background-color: rgb(26, 7, 35);
+}
+
+@media (max-width: 768px) {
+    header nav {
+        float: none; /* Убираем флотацию для навигации */
+        width: 100%; /* Устанавливаем ширину на 100% */
+        text-align: center; /* Центрируем навигацию */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Устанавливаем вертикальную ориентацию */
+        align-items: center; /* Центрируем элементы списка */
+    }
+
+    header nav ul li {
+        margin-bottom: 10px; /* Отступ между элементами навигации */
+    }
+
+    .hero--info {
+        width: 100%; /* Устанавливаем ширину блока информации на 100% */
+        text-align: center; /* Центрируем текст */
+        padding: 0 20px; /* Добавляем отступы */
+    }
+
+    .hero--info h1 {
+        font-size: 32px; /* Уменьшаем размер заголовка */
+    }
+
+    .hero--info p {
+        font-size: 18px; /* Уменьшаем размер текста */
+    }
+
+    .history--info {
+        width: 100%; /* Устанавливаем ширину на 100% */
+        padding-top: 30px; /* Уменьшаем отступ сверху */
+    }
+
+    .trending .pictures {
+        flex-direction: column; /* Переключаем на вертикальное выравнивание */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .trending h2 {
+        font-size: 22px; /* Уменьшаем размер заголовка */
+    }
+
+    footer .blocks {
+        flex-direction: column; /* Выравнивание блока футера вертикально */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    footer .blocks p,
+    footer .blocks h5 {
+        text-align: center; /* Центрируем текст футера */
+        width: auto; /* Убираем фиксированную ширину */
+    }
+
+    .hero img,
+    .history img, .hero-about img, .hero-with img, .hero-who img {
+        max-width: 90%; /* Уменьшаем максимальную ширину изображений */
+        height: auto; /* Поддерживаем пропорции изображения */
+        position: relative; /* Сброс позиции, чтобы избежать наложения текста */
+        margin-top: 20px; /* Отступ сверху для отделения от текста */
+        margin-bottom: 20px; /* Отступ снизу для отделения от текста */
+    }
+
+    .history img {
+        position: relative; /* Сбросьте абсолютное позиционирование */
+        top: auto; /* Убираем позиционирование сверху */
+    }
+
+    /* Для остальных изображений в других секциях */
+    .work .blocks .block img {
+        max-width: 100%; /* Ограничиваем ширину на 100% от родителя */
+        height: auto; /* Поддерживаем пропорции изображения */
+    }
+}
+
+/* Оптимизация для планшетов (1024px и меньше) */
+@media (max-width: 1024px) {
+    header nav {
+        width: 100%; /* Ширина навигации на планшетах */
+    }
+
+    header nav ul {
+        justify-content: center; /* Центрирование элементов на планшетах */
+    }
+
+    .hero--info, .hero-about .info, .hero-with .info, .hero-who .info {
+        width: 80%; /* Уменьшаем ширину блоков информации */
+        padding: 20px; /* Добавляем отступы, если нужно */
+    }
+
+    .work .blocks .block {
+        width: 45%; /* Уменьшаем ширину блоков на планшетах */
+    }
+
+    footer .blocks {
+        flex-direction: column; /* Вертикальная ориентация в футере для планшетов */
+        align-items: center; /* Центрируем элементы в футере */
+    }
+}
