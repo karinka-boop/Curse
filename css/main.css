@@ -4,6 +4,8 @@
     padding: 0;
 }
 
+
+
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -464,6 +466,34 @@ footer .blocks ul li {
 }
 
 /* CSS для формы регистрации */
+.register-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(42, 4, 60, 1);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    background-color: rgb(26, 7, 35);
+}
+
 .register-container {
     max-width: 500px;
     margin: 50px auto; /* Центрирование контейнера */
@@ -576,32 +606,31 @@ footer .blocks ul li {
 
     /* Для остальных изображений в других секциях */
     .work .blocks .block img {
-        max-width: 100%; /* Ограничиваем ширину на 100% от родителя */
-        height: auto; /* Поддерживаем пропорции изображения */
+        max-width: 100%; 
+        height: auto; 
     }
 }
 
-/* Оптимизация для планшетов (1024px и меньше) */
 @media (max-width: 1024px) {
     header nav {
-        width: 100%; /* Ширина навигации на планшетах */
+        width: 100%; 
     }
 
     header nav ul {
-        justify-content: center; /* Центрирование элементов на планшетах */
+        justify-content: center; 
     }
 
     .hero--info, .hero-about .info, .hero-with .info, .hero-who .info {
-        width: 80%; /* Уменьшаем ширину блоков информации */
-        padding: 20px; /* Добавляем отступы, если нужно */
+        width: 80%; 
+        padding: 20px; 
     }
 
     .work .blocks .block {
-        width: 45%; /* Уменьшаем ширину блоков на планшетах */
+        width: 45%; 
     }
 
     footer .blocks {
-        flex-direction: column; /* Вертикальная ориентация в футере для планшетов */
-        align-items: center; /* Центрируем элементы в футере */
+        flex-direction: column;
+        align-items: center;
     }
 }
